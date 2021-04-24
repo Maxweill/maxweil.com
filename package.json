@@ -1,0 +1,15 @@
+{
+  "name": "maxweil.com",
+  "version": "0.0.0",
+  "description": "My personal website. Written in Node/Express.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

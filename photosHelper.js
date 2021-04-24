@@ -11,7 +11,6 @@ function buildAlbumList()
 		photos = photos.filter(file => file != "thumbs")
 		console.log
 		var albumdir = { date: dirString[0].trim(), name: dirString[1].trim(), directory: dir[i], photos: photos };
-		console.log(albums)
 		albums.push(albumdir);
 	}
 	albums.sort(dateComparator).reverse();

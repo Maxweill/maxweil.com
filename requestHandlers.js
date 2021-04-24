@@ -13,7 +13,6 @@ function renderRadio(req, res)
 }
 function renderLogList(req, res)
 {
-	loglist = logListHelper.buildLogList();
 	res.render('log', { layout: 'index', logs: loglist, fortune: getRandomFortune(fortunes) });
 }
 function renderLog(req, res)
