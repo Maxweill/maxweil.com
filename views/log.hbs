@@ -1,0 +1,12 @@
+<body>
+	<h1> log </h1>
+		<ul>
+			{{#each logs}}
+				<li> 
+					<a href={{this.pagename}}>{{this.title}}</a>
+					<p class=subtitle>{{this.date}}</p>
+				</li>
+			{{/each}}
+		</ul>
+</body>
+

@@ -1,0 +1,13 @@
+<body>
+    <h1> photos </h1>
+    	<p> Here are some photos I have taken.</p>
+    {{#each albums}}
+        <h2>{{this.date}} - {{this.name}}</h2>
+        {{#each this.photos}}
+            <a href="/photos/{{../this.directory}}/{{this}}">
+                <img src="/photos/{{../this.directory}}/thumbs/{{this}}"/>
+            </a>
+        {{/each}}
+    {{/each}}
+</body>
+

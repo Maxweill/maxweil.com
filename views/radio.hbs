@@ -1,0 +1,57 @@
+<body>
+	<script type="text/javascript">
+       	setInterval(refreshInfo, 8000);
+       	function refreshInfo() 
+		{
+		   	obj = GetMetaData("https://maxweil.com:6970/status-json.xsl")	   
+			if (obj) UpdateUserInfo(obj)
+		}
+		function GetMetaData(url)
+		{
+			var Httpreq = new XMLHttpRequest();
+			Httpreq.open("GET",url,false);
+			Httpreq.send(null);
+			return JSON.parse(Httpreq.responseText);
+		}
+		function UpdateUserInfo(jsonArr)
+		{
+			var song = document.getElementById("NowPlayingTitle")
+			var artist = document.getElementById("NowPlayingArtist")
+			var listeners = document.getElementById("Listeners")
+			var playlist = document.getElementById("Playlist")
+			if (jsonArr["icestats"]["source"]===undefined)
+			{
+				listeners.textContent="-";
+				song.textContent="";
+				artist.textContent="";
+				playlist.textContent="-";
+				return;				
+			}
+			if (song) song.textContent=jsonArr["icestats"]["source"]["title"]
+			if (artist) artist.textContent=jsonArr["icestats"]["source"]["artist"]
+			if (listeners) listeners.textContent=jsonArr["icestats"]["source"]["listeners"]
+			if (playlist) 
+			{
+				var len = jsonArr["icestats"]["source"]["playlist"]["trackList"].length;		
+				playlist.textContent=jsonArr["icestats"]["source"]["playlist"]["trackList"][len-2]["title"] + " - " +jsonArr["icestats"]["source"]["playlist"]["trackList"][len-2]["creator"]
+			}
+
+
+		}
+  	</script>
+	<h1> radio </h1>
+		<p> Favorite Frequency Friday - Weekly at 9pm | 8c </p>  
+		Now Playing: <span id="NowPlayingTitle"></span> - <span id="NowPlayingArtist"></span>
+	<figure>
+		<figcaption> maxweil@radio</figcaption>
+			<audio id="radio" controls="" src="https://maxweil.com:6970/stream.ogg">
+	</audio></figure>
+	<p>Previous Song: <span id="Playlist"></span></p>
+	<p>Listeners: <span id="Listeners"></span></p>
+    
+    <script>refreshInfo()</script>
+	<script>
+		var audio = document.getElementById("radio");
+		audio.volume=0.33;
+	</script>
+</body>
