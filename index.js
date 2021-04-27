@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const fs = require('fs')
 const https = require('https')
+const chalk = require('chalk')
 const port = 443;
 
 const handlebars = require('express-handlebars');
@@ -9,6 +10,13 @@ var requestHandlers = require("./requestHandlers");
 var serveStatic = require('serve-static')
 var serveIndex = require('serve-index')
 
+app.all("*", function (req, resp, next) {
+	if (!req.path.startsWith('/photos') || req.path=='/photos/') 
+	{
+		console.log(new Date().toISOString()+" "+"\""+chalk.cyan(req.method + ': ' + req.path)+"\" "+req.headers["user-agent"]+' '+chalk.green(req.ip));	
+	}
+   	next();
+});
 app.use(express.static('public'));
 app.use('/favicon.ico', express.static('favicon.ico'));
 app.set('view engine', 'hbs');
