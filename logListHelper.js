@@ -1,5 +1,7 @@
 const fs = require('fs')
 const LOG_PATH = 'public/log/'
+const md = require('markdown-it')({breaks: true});
+
 function buildLogList()
 {
 	var dir = fs.readdirSync(LOG_PATH, 'utf8')
@@ -19,24 +21,16 @@ function loadSingleLog(path, filename)
 	parsedLogArray = [];
 	parsedLogArray.push(parseHeaderData(data[0], "date:"))
 	parsedLogArray.push(parseHeaderData(data[1], "title:"))
-	parsedLogArray.push(parseHeaderData(data[2], "content:") + '<br>')
-	for (var i = 3; i < data.length; i++)
-	{
-		if (data[i])
-		{
-			parsedLogArray[2] += data[i];
-		}
-		else
-		{
-			parsedLogArray[2] += '<br>'
-		}
-	}
+	contentArray = data.slice(2);
+	contentString = contentArray.join('\n\n');
+	contentString = md.render(contentString);
+	
 	log = {};
 	log.datetime = parsedLogArray[0];
 	log.date = parsedLogArray[0].substring(0, parsedLogArray[0].indexOf('[')).trim();
 	log.time = parsedLogArray[0].substring(parsedLogArray[0].indexOf('[')).trim();
 	log.title = parsedLogArray[1];
-	log.content = parsedLogArray[2];
+	log.content = contentString;
 	log.filename = filename;
 	log.pagename = filename.substring(0, filename.lastIndexOf('.'));
 	return log;
