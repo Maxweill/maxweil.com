@@ -1,5 +1,7 @@
 date: 2021-04-23 [18:00]
 title: Hello World!
-content: The log is officially live. I'm not entirely sure yet what I'm going to post in these logs, but it could be anything from reviews of places I visit, to fiction writings, to random tech crap, to anything in between. Please enjoy my little space of the web.
+The log is officially live! 
+I'm not entirely sure yet what I'm going to post in these logs, but it could be anything from reviews of places I visit, to fiction writings, to random tech crap, to anything in between. 
+Please enjoy my little space of the web.
 
 maxweil

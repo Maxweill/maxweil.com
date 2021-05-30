@@ -1,6 +1,6 @@
 const fs = require('fs')
 const LOG_PATH = 'public/log/'
-const md = require('markdown-it')({breaks: true});
+const md = require('markdown-it')({html: true,breaks: true});
 
 function buildLogList()
 {

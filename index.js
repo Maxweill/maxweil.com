@@ -3,7 +3,7 @@ const app = express();
 const fs = require('fs')
 const https = require('https')
 const chalk = require('chalk')
-const port = 443;
+const port = 9001;
 
 const handlebars = require('express-handlebars');
 var requestHandlers = require("./requestHandlers");
@@ -49,3 +49,7 @@ const credentials = {
 https.createServer(credentials,app)
 .listen(port)
 console.log(`App listening to port ${port}`)
+
+/*app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})*/
