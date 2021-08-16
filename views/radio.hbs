@@ -27,7 +27,13 @@
 				playlist.textContent="-";
 				return;				
 			}
-			if (song) song.textContent=jsonArr["icestats"]["source"]["title"]
+			if (song) {
+				if (song.textContent!=jsonArr["icestats"]["source"]["title"])
+				{
+					playlist.textContent=song.textContent + " - " + artist.textContent
+				}		
+				song.textContent=jsonArr["icestats"]["source"]["title"]
+			}
 			if (artist) artist.textContent=jsonArr["icestats"]["source"]["artist"]
 			if (listeners) listeners.textContent=jsonArr["icestats"]["source"]["listeners"]
 			if (playlist) 
