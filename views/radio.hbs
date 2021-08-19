@@ -1,24 +1,28 @@
 <body>
 	<script type="text/javascript">
-       	setInterval(refreshInfo, 8000);
-       	function refreshInfo() 
+       	var Httpreq = new XMLHttpRequest();
+		Httpreq.onreadystatechange= function()
 		{
-		   	obj = GetMetaData("https://maxweil.com:6970/status-json.xsl")	   
-			if (obj) UpdateUserInfo(obj)
+			if (Httpreq.readyState == XMLHttpRequest.DONE)
+			{
+				UpdateUserInfo(JSON.parse(Httpreq.responseText));
+			}
 		}
-		function GetMetaData(url)
+
+		setInterval(GetMetaData, 8000);
+		function GetMetaData()
 		{
-			var Httpreq = new XMLHttpRequest();
-			Httpreq.open("GET",url,false);
+			Httpreq.open("GET","https://maxweil.com:6970/status-json.xsl");
 			Httpreq.send(null);
-			return JSON.parse(Httpreq.responseText);
 		}
+
 		function UpdateUserInfo(jsonArr)
 		{
 			var song = document.getElementById("NowPlayingTitle")
 			var artist = document.getElementById("NowPlayingArtist")
 			var listeners = document.getElementById("Listeners")
 			var playlist = document.getElementById("Playlist")
+			var audio = document.getElementById("radio");		
 			if (jsonArr["icestats"]["source"]===undefined)
 			{
 				listeners.textContent="-";
@@ -36,26 +40,35 @@
 			}
 			if (artist) artist.textContent=jsonArr["icestats"]["source"]["artist"]
 			if (listeners) listeners.textContent=jsonArr["icestats"]["source"]["listeners"]
-			if (playlist) 
-			{
-				var len = jsonArr["icestats"]["source"]["playlist"]["trackList"].length;		
-				playlist.textContent=jsonArr["icestats"]["source"]["playlist"]["trackList"][len-2]["title"] + " - " +jsonArr["icestats"]["source"]["playlist"]["trackList"][len-2]["creator"]
-			}
-
-
+		}
+		function goodBye()
+		{
+			console.log('Audio stopped because no further data is available. If max was smart, he would attempt to reconnect here.');
 		}
   	</script>
 	<h1> radio </h1>
 		<p> Favorite Frequency Friday - Weekly at 9pm | 8c </p>  
 		Now Playing: <span id="NowPlayingTitle"></span> - <span id="NowPlayingArtist"></span>
+
+	
 	<figure>
 		<figcaption> maxweil@radio</figcaption>
-			<audio id="radio" controls="" src="https://maxweil.com:6970/stream.ogg">
+			<audio id="radio" controls="" src="https://maxweil.com:6970/stream.ogg" onended="goodBye()">
 	</audio></figure>
 	<p>Previous Song: <span id="Playlist"></span></p>
 	<p>Listeners: <span id="Listeners"></span></p>
-    
-    <script>refreshInfo()</script>
+
+	
+	{{#if radiolist}}
+		<h2>Album List - {{radiolist.date}}</h2>
+			<ul>
+				{{#each radiolist}}
+					<li> 
+						{{this.title}}
+					</li>
+				{{/each}}
+			</ul>
+	{{/if}}
 	<script>
 		var audio = document.getElementById("radio");
 		audio.volume=0.33;
