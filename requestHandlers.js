@@ -7,9 +7,13 @@ var getRandomFortune = fortunesHelper.getRandomFortune
 
 var photosHelper = require('./photosHelper');
 var albums = photosHelper.buildAlbumList();
+
+var radioListHelper = require('./radioListHelper');
+var radiolist = radioListHelper.buildRadioList();
+
 function renderRadio(req, res)
 {
-	res.render('radio', { layout: 'index', fortune: getRandomFortune(fortunes) });
+	res.render('radio', { layout: 'index', radiolist: radiolist, fortune: getRandomFortune(fortunes) });
 }
 function renderLogList(req, res)
 {
