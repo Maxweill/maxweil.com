@@ -1,0 +1,63 @@
+date: 2021-06-13 [19:50]
+title: a 'crack' in the armor.
+## intro
+> *This is being published after disclosure to the creator and them having patched the vulnerability.*
+There was a little paid program I wanted to use for some personal work. Lucky for me, they had a trial version up on their website. Very cool. I was able to test it out a bit, and found that what I really wanted to use it for was locked behind the pro version. 
+
+While, like the upstanding citizen I am, my first thought was to just pay for it, something caught my eye on the downloads page: The creator had uploaded the program's JAR. 
+
+A JAR without any obfuscation is just a glorified archive. You can easily view and modify the raw .java files using something like JD GUI and poke around. Which is precisely what I did. 
+
+It doesn't take a genius of cracking to ctrl+f through the source code to find the string that says "Your activation key is incorrect. Please try again. Make sure your Os and os are 0s." Doing so brought me right to where I needed to be, a single "isValidKey(usrInput)". After jumping into the function I was met with some unobfuscated validation code. 
+
+If I wanted to call it a day, I could've just modified 'isValidKey' to always return true, recompile, and been done with it. But, I was in the mood to stretch my brain a little bit (as a purely technical exercise). I thought 'How would I solve this issue if I were, say, a malicious cracker who wanted *everyone* to get access to the paid version?'
+
+## keygen
+
+The validation logic isn't very sophisticated. Maybe it's a classic sort of 'academic' key algorithm, but I wasn't familiar with it. 
+
+It breaks up the string into two halves. The first digit of each half (indices 0 and 5) is the checksum. The four following numbers/letters must be equal the checksum when summed and % 36. There are also a few more smaller complications that are of no real consequence, for instance, you can't have more than 3 zeroes across the whole key, or have fewer than 3 letters. 
+
+There is one small arithmetic trick here which is that the authors algorithm does not use CHAR values, but a more 'civilian' alphanumeric system. (i.e. 'a' is not 97, it is 10 because 0,1,2,3,4,5,6,7,8,9,a,b,c,...)
+
+You could probably take a minute or two just from this descriptionad and put together a key. Or, we can work smarter and try something else, how about making a keygen? As I've been hinting at, this is actually quite trivial. 
+
+There are a few ways of generating four digits that sum to another. Here's what I used:
+
+### noodle-y bits
+Generate a first digit at random. This represents our checksum. Example: 'y', which in this system = 34.
+
+So, we will use 34 as our target.
+
+Next, we generate three numbers. Our only rule is that the three numbers, when summed, must be less than 34. There are many ways to do this. Here's mine, which uses some RNG and a smaller set of numbers so I could avoid the 'too many zeroes' and 'too many letters' constraints.
+
+>a = random.randint(2, seed)
+>b = random.randint(1, a - 1)
+>c = random.randint(a + 1, seed)
+
+Lets say we got... a=8, b=11, c=2.
+
+We still need D, (and ideally it'd be nonzero), so we can just do some simple arithmetic to exactly equal our seed. 
+a + b + c < seed, so:
+>d = seed-(a+b+c) //in this case, d = 13
+
+Now we've got four alphanumerics that sum to our seed.
+a=8, b=11, c=2, d=13
+
+Finally, we build our string, the seed, followed by the digits we generated. Digits below 9 stay as is, and letters become their letter (cast to character the value + 87 because the lowercase alphabet begins at 87 in ascii)
+>seed=34, a=8, b=11, c=2, d=13
+>seed='y', a='8', b='b', c='2', d='d' //yes. this is a contrived example so that b=b and d=d. 
+>key='y8b2d'
+
+Do this twice and append the two halves together, and we have a valid key.
+
+## end
+
+This was fun and all, but clearly a problem given that it took me the lesser part of an hour to break the key, and come up with an algorithm to generate an infinite number of keys for what is this gentleman's livelihood. 
+
+So I went back to the website and shot him a disclosure email. He has since changed his practices to both obfuscate the logic and no longer release the JAR. As a reward for my discretion, he sent me an authentic license key, but I went ahead and bought my copy anyway.
+
+maxweil
+
+
+
