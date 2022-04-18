@@ -39,14 +39,10 @@ main {
   padding-bottom: 10px;
 }
 
-main a {
-  color: #006eff;
+a{
+  color: #e0e0e0;
 }
-
-main a:hover {
-  background-color: #006eff;
-  /*color: #0c0c0c;*/
-}
+a:hover { background-color: #e0e0e0; }
 
 nav {
   padding-top: 5px;

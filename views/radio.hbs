@@ -15,7 +15,17 @@
 			Httpreq.open("GET","https://maxweil.com:6970/status-json.xsl");
 			Httpreq.send(null);
 		}
-
+		function hideShowChat() {
+			var x = document.getElementById("chat");
+			if (x.style.display === "none") 
+			{
+				x.style.display = "block";
+			} 
+			else 
+			{
+				x.style.display = "none";
+			}
+		}
 		function UpdateUserInfo(jsonArr)
 		{
 			var song = document.getElementById("NowPlayingTitle")
@@ -47,7 +57,7 @@
 		}
   	</script>
 	<h1> radio </h1>
-		<p> Favorite Frequency Friday - Weekly at 9pm | 8c </p>  
+		<p> The machine idles — it awaits instructions for reactivation.</p>  
 		Now Playing: <span id="NowPlayingTitle"></span> - <span id="NowPlayingArtist"></span>
 
 	
@@ -69,6 +79,7 @@
 				{{/each}}
 			</ul>
 	{{/if}}
+	
 	<script>
 		var audio = document.getElementById("radio");
 		audio.volume=0.33;

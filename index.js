@@ -27,6 +27,7 @@ app.engine('hbs', handlebars(
 
 //Sets a basic route
 app.get('/', requestHandlers.renderHome);
+app.get('/works', requestHandlers.renderWorks);
 app.get('/radio', requestHandlers.renderRadio);
 app.get('/photos', requestHandlers.renderPhotos);
 app.get('/log', requestHandlers.renderLogList);

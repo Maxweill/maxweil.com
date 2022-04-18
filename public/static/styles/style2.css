@@ -1,0 +1,245 @@
+
+@font-face {
+    font-family: 'pxplus_ibm_vga8regular';
+    src: url('/css/PxPlus_IBM_VGA8.ttf') format('truetype');
+    font-weight: normal;
+
+}
+@font-face {
+    font-family: 'pc98';
+    src: url('/css/PC_9800.woff2') format('woff2'),
+	url('/css/PC_9800.woff') format('woff'),
+	url('/css/pc-9800.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #181818;
+    color: #eee;
+    font-family: "pxplus_ibm_vga8regular";
+    animation: fade_in 750ms;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.1;
+    text-align: justify;
+    margin: 0;
+    padding: 15px 15px 30px 15px;
+}
+
+.patrycja {
+	color: #ff7b9b !important;
+}
+.patrycja:hover {
+	color: #ffb9d3 !important;
+}
+.laura {
+	color: #d60270 !important; /* I have no idea why this important is needed, I broke something */
+}
+.laura:hover {
+	color: #f63090 !important;
+}
+.maja {
+	color: #4cd771 !important;
+}
+.maja:hover {
+	color: #78ff79 !important;
+}
+.riley {
+	color: #6957bd !important;
+}
+.riley:hover {
+	color: #a089f6 !important;
+}
+
+#badge > img, #badge > a > img {
+	image-rendering: pixelated;
+}
+
+pre, .kana, .blog > h1,h2,h3,h4,h5 {
+    font-family: 'pc98';
+    text-align: start;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: initial;
+}
+
+h1 {
+    font-size: 64px;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 32px;
+    margin: 15px 0 5px 0;
+}
+
+h4,h5 {
+    font-size: 16px;
+}
+
+#header_right {
+    align-items: center;
+    text-shadow: 5px 5px #555;
+    padding: 20px;
+    float: right;
+    text-align: center;
+}
+
+#header_left {
+    float:left;
+    text-align:center;
+}
+#header_left > a > img {
+    width: 180px;
+    box-shadow: 5px 5px #555;
+    text-align: center;
+}
+
+#content {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    clear: both;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menuitem {
+    position: relative;
+    display: inline;
+    text-shadow: 4px 4px #444;
+    margin: 0 16px 0 16px;
+    text-align: center;
+}
+
+.menuitem:hover {
+    text-shadow: 2px 2px #444;
+    top: 2px;
+    left: 2px;
+}
+
+#badge {
+    float: right;
+    margin: 2px 0 0 10px;
+}
+
+
+a, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: #1a1;
+}
+a:hover, a:active {
+    color: #1c1;
+}
+
+hr {
+    background-color: #2f2f2f;
+    height: 1px;
+    border: 0;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+ol > li {
+    list-style-type: decimal-leading-zero;
+}
+
+ul > li {
+    list-style-type: square;
+}
+
+ul {
+    padding-left: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ol {
+    margin-top: 0;
+    margin-bottom:0;
+}
+
+li > a > img {
+    margin: 5px 10px 0 0;
+}
+
+p {
+    margin-top: 5px;
+}
+
+code {
+    display: block;
+    background-color: #282828;
+    color: #ccc;
+    width: 100%;
+    padding: 5px 5px 10px 15px;
+    margin: 10px 0;
+    font-family: 'pxplus_ibm_vga8regular', monospace;
+    white-space: pre;
+    box-shadow: 6px 6px #000;
+    overflow-x: auto;
+}
+
+@media (min-width: 769px) {
+    #content, #header {
+        width: 768px;
+    }
+}
+
+@media (max-width: 768px) {
+    #header_left {
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+    #header_right, #header_right > ul {
+        float: none;
+        margin: 20px 0;
+        padding: 0;
+    }
+    .menuitem {
+        margin: 0 4px 0 4px;
+        padding: 0;
+    }
+    #content {
+        margin: 0;
+        padding: 0;
+    }
+    #footer, #badge {
+        text-align: center;
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@keyframes fade_in {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+

@@ -27,6 +27,10 @@ function renderHome(req, res)
 {
 	res.render('home', { layout: 'index', fortune: getRandomFortune(fortunes) });
 }
+function renderWorks(req, res)
+{
+	res.render('works', { layout: 'index', fortune: getRandomFortune(fortunes) });
+}
 function renderPhotos(req, res)
 {
 	res.render('photos', { layout: 'index', albums: albums, fortune: getRandomFortune(fortunes) });
@@ -37,6 +41,7 @@ function render404(req, res)
 }
 exports.renderHome = renderHome;
 exports.renderLog = renderLog;
+exports.renderWorks = renderWorks;
 exports.renderLogList = renderLogList;
 exports.renderRadio = renderRadio;
 exports.render404 = render404;

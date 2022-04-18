@@ -1,0 +1,52 @@
+date: 2021-12-31 [23:59]
+title: a year in review
+
+>Hello dear reader, whoever you are, whenever you are. 
+
+>To be honest, I am not sure who reads these logs. From what I can tell, it's nobody but webcrawlers. Which is okay; not everything written needs to be read.
+>
+>It has been a tradition of mine since college to get extremely drunk (alone) on New Year's Eve, and smash out a barely intelligible essay-cum-blogpost-cum-diary-entry where I whine and opine about my life, the world, the future, et al. 
+>
+>In past years, these were posted on a private blog and never re-read after posting (attempting to read my pathetic rambles the next morning exacerbated the hangovers).
+>
+>This year, however, I am banned from getting drunk by myself as part of my (still ongoing) resolution, which means that at least one part of this tradition is going away. So, instead, here is a sober reflection of the year 2021. 
+
+2021 was an okay year. It wasn't terrible. It wasn't amazing. It was okay.
+
+Though I am loathe to use the phrases, there was a lot of 'soul searching' and 'self discovery' for me this year. I learned a lot about myself; who I am & who I want to be, where I want to go & where I am. 
+
+Early in the year, I up and decided that I wanted to start camping. Fueled by highly bucolic media and a desire to 'get away' (both from 'my life' and 'technology' [though both *are* interlinked]). I did a little research, put in my reservations, and ordered my gear. It was all sort of whimsical. I decided I wanted to do it, so I did it. And what a decision that was: I have found a new love. Camping, to me, is meditation. It begins as soon as I start packing. The sea of troubles pours from my ears, and my brain rests like a serene, undisturbed lake. Do not get me wrong - I am under no pretenses that I am a 'rugged mountain man' or 'outdoorsman' or any such epithet. But even my short forays into the wilderness, driving through windy country roads and hiking to an isolated campsite, are enough of a 'slice of Walden' for me. I went on four solo camping trips this year. Next year, I would like to try some sort of camping-trip, where I road trip and camp as opposed to sleep in a hotel (perhaps I'll get my motorcycle license and moto-camp? Who knows).
+
+As an accent to camping & hiking, I rekindled my interest in photography. I have a decade old Canon T3i that I got in high school, which I brought with me on my sylvan expeditions. I don't really think I am particularly great at snapping photos. I have shaky hands and not the best instinct for framing, but the great thing about digital is that I can shoot fourteen shots and at least one of them will be passable. After a few hikes where I ran into some wildlife that my stock-lens could not capture (distant deer, birds in trees), I decided to get a telephoto lens to 'up my game', so to speak. Providence was upon me, as a friend of mine had an old lens hanging around that fit my camera, and he sold it to me for dirt cheap. That friend and his old lens made an indescribable difference to me and my shooting, and for that I am truly grateful (and truly lucky).
+
+Some smaller things from 2021: 
+* Fashion. I made some great purchases and threw away (see: donated) bagfuls of clothes to try and really nail down my look. Which I think I made good progress on. I got over any and all self-consciousness by wearing relatively 'alternate' clothes (at least vs. how normal office-folk dress) and shaving my head. 
+
+* Gardening. Over the Spring and Summer, I grew some vegetables in a communal plot. Easy vegetables: Potatoes, onions, carrots. Herbs too. But, it was fun. Getting in the dirt was fun, the routine of watering and weed pulling was fun, and the payoff was fun (I still have potatoes. I'm sick of them at this point).
+
+* Art. This year I started to draw. Well, *doodle* is more like it. I've done some scratchy work here and there, mostly for fun. I don't know if I have it in me to get down to business and grind out the fundamentals, but who knows. What I have done is fun, though, and that's good.
+
+The last good thing I want to touch on is this. No, not the website (though that was also a cool bit of work), I mean writing.
+
+I wrote a lot this year. More than I've ever written in a year before, even in my busiest of college semesters. And, well, writing a lot is one of the key steps to getting good at writing. Or perhaps getting 'great' at writing. I've always enjoyed writing little blurbs for magic items and lore for worldbuilding my D&D setting, but rarely have I ever written anything long form. So, this year I wrote a piece for a writing contest that was being hosted at my job. It was titled "Planting Seeds", you can read it on this site (Log 2). It didn't win, but that's not all surprising given that it went from nothing to drafted to edited to submitted in a day, from what I recall. But, that work pales in comparison to my largest work yet: *Moths to a Flame*. 
+
+>For a while, I had joked with an artist friend of mine about making a "Dark Academia visual novel". We had even begun drafting characters and a loose plot for it, but it fell to the wayside as we had no deadlines nor commitments for it, so work and school and other things came first. But it always sat in my head. In August, I discovered that there was a 'Spooktober' VN gamejam: over the month of September, make a horror themed visual novel. I dropped a link to him and said "wanna do this?" and he said yes. We got a few more people on board, notably another writer and a music-goblin, and when September came, we set out. 
+>
+>We few, we happy few, we band of brothers, we game-dev virgins, set out to make a visual novel, and by Jove, did it. I could not have done it without my team, doubtless: I can't draw. I didn't have time to write *everything*. I can't make background music. What we created surpassed every expectation I imagined. I still remember how fast my heart beat after inserting our art for the first time; seeing the scenes come alive, no longer just black text in a white box. 
+>
+>That being said, I am absolutely one to toot my own horn. However, in this case, I am not doing so when I say that I carried the team. I developed the plot. I wrote the outline. I made the characters, I built the setting. I wrote (most of) the prose. I coded *everything*. I even made some music! I put in an incredible amount of effort (even taking time off work to finish by the deadline). 
+>
+>*Moths to a Flame* was more than just a gamejam entry to me. It was an extension of my ego. It was my brainchild, it was (mostly) my labor that brought it to life. It was something significant (in the sense of 'non-trivial' as opposed to 'important') that I saw through from start to finish. But - it didn't win, didn't even place. That was hard for me. It was hard for me *because* it was mine. *Because* of my effort. I wanted it to win; I wanted to feel validated - for all that work to be recognized. And when it didn't, I didn't - it wasn't. I couldn't hide away and say "Oh, my team let me down", because they didn't, *I* "let me down".
+>
+>It has been a few months since then, and the sourness is largely gone; I am more proud than anything else about *Moths*. I think back about what we got done as complete newbies in so little time and am still amazed. I will continue to write, and I will continue to impress myself, and hopefully someday I will have an audience of people who find enjoyment in what I create.
+
+Now that I've touched on all of the 'good things' I feel comfortable touching on, I should at least mention the 'bad things'. I will not dwell on them too much, so, briefly:
+
+* Work. Work sucks. Fuck work. I hate work. 
+* Mental. I am angry at nothing, constantly. I grow distant from my friends. Few things are fun.
+
+You know, when I write out paragraphs of what was good and nothing at all about what was bad, it makes the retrospective feel a lot more positive than these had been in previous years. Which I suspect is a good thing. If this is all I write about 2021, then in the future, I'll look back and say "Huh, that year was pretty good". Well, that'd be the gist of it. I probably wouldn't say "Huh".
+
+Onwards and upwards,
+
+maxweil

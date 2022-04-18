@@ -29,7 +29,7 @@ function buildRadioList()
 			radiolist.push(album)
 		}
 	}
-	return radiolist.reverse()
+	return radiolist
 }
 
 exports.buildRadioList = buildRadioList;
